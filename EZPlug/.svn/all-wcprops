@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/ezplug/!svn/ver/2/trunk/EZPlugDemo/EZPlug
+END
+AudioConfiguration.h
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/ezplug/!svn/ver/2/trunk/EZPlugDemo/EZPlug/AudioConfiguration.h
+END
+Sequencer.h
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/ezplug/!svn/ver/9/trunk/EZPlugDemo/EZPlug/Sequencer.h
+END
+EZPlugStringUtil.h
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/ezplug/!svn/ver/5/trunk/EZPlugDemo/EZPlug/EZPlugStringUtil.h
+END
+EZPlugSynth.h
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/ezplug/!svn/ver/8/trunk/EZPlugDemo/EZPlug/EZPlugSynth.h
+END
+BasicSequencer.h
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/ezplug/!svn/ver/7/trunk/EZPlugDemo/EZPlug/BasicSequencer.h
+END
+CPPAudioUtil.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/ezplug/!svn/ver/2/trunk/EZPlugDemo/EZPlug/CPPAudioUtil.cpp
+END
+EZCircularBuffer.h
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/ezplug/!svn/ver/2/trunk/EZPlugDemo/EZPlug/EZCircularBuffer.h
+END
+FileReadExtAudioFile.h
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/ezplug/!svn/ver/9/trunk/EZPlugDemo/EZPlug/FileReadExtAudioFile.h
+END
+CPPAudioUtil.h
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/ezplug/!svn/ver/2/trunk/EZPlugDemo/EZPlug/CPPAudioUtil.h
+END
+ORDLockFreeQueue.h
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/ezplug/!svn/ver/4/trunk/EZPlugDemo/EZPlug/ORDLockFreeQueue.h
+END
+Sequencer.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/ezplug/!svn/ver/2/trunk/EZPlugDemo/EZPlug/Sequencer.cpp
+END
+EZPlugHelper.h
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/ezplug/!svn/ver/2/trunk/EZPlugDemo/EZPlug/EZPlugHelper.h
+END

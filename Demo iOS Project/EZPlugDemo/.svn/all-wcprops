@@ -1,0 +1,89 @@
+K 25
+svn:wc:ra_dav:version-url
+V 35
+/ezplug/!svn/ver/2/trunk/EZPlugDemo
+END
+EZPlugDemo-Prefix.pch
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/ezplug/!svn/ver/2/trunk/EZPlugDemo/EZPlugDemo-Prefix.pch
+END
+main.m
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/ezplug/!svn/ver/2/trunk/EZPlugDemo/main.m
+END
+TLC.mp3
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/ezplug/!svn/ver/8/trunk/EZPlugDemo/TLC.mp3
+END
+bachants.aif
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/ezplug/!svn/ver/2/trunk/EZPlugDemo/bachants.aif
+END
+EZPlgDemoSynth.h
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/ezplug/!svn/ver/8/trunk/EZPlugDemo/EZPlgDemoSynth.h
+END
+EZPlgAppDelegate.h
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/ezplug/!svn/ver/2/trunk/EZPlugDemo/EZPlgAppDelegate.h
+END
+EZPlgAppDelegate.mm
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/ezplug/!svn/ver/2/trunk/EZPlugDemo/EZPlgAppDelegate.mm
+END
+EZPlgViewController.h
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/ezplug/!svn/ver/2/trunk/EZPlugDemo/EZPlgViewController.h
+END
+EZPlugSynthController.h
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/ezplug/!svn/ver/2/trunk/EZPlugDemo/EZPlugSynthController.h
+END
+RemoteIOPlayer.h
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/ezplug/!svn/ver/2/trunk/EZPlugDemo/RemoteIOPlayer.h
+END
+EZPlgViewController.mm
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/ezplug/!svn/ver/2/trunk/EZPlugDemo/EZPlgViewController.mm
+END
+EZPlugSynthController.mm
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/ezplug/!svn/ver/2/trunk/EZPlugDemo/EZPlugSynthController.mm
+END
+RemoteIOPlayer.mm
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/ezplug/!svn/ver/2/trunk/EZPlugDemo/RemoteIOPlayer.mm
+END
+EZPlugDemo-Info.plist
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/ezplug/!svn/ver/2/trunk/EZPlugDemo/EZPlugDemo-Info.plist
+END

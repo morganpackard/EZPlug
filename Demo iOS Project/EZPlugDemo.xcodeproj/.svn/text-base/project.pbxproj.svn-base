@@ -1,0 +1,632 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A882871314F4330000EFCEB2 /* ADSR.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A882870214F4330000EFCEB2 /* ADSR.cpp */; };
+		A882871414F4330000EFCEB2 /* Delay.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A882870414F4330000EFCEB2 /* Delay.cpp */; };
+		A882871514F4330000EFCEB2 /* JCRev.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A882870914F4330000EFCEB2 /* JCRev.cpp */; };
+		A882871614F4330000EFCEB2 /* OnePole.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A882870B14F4330000EFCEB2 /* OnePole.cpp */; };
+		A882871714F4330000EFCEB2 /* PRCRev.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A882870D14F4330000EFCEB2 /* PRCRev.cpp */; };
+		A882871814F4330000EFCEB2 /* SineWave.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A882870F14F4330000EFCEB2 /* SineWave.cpp */; };
+		A882871914F4330000EFCEB2 /* Stk.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A882871114F4330000EFCEB2 /* Stk.cpp */; };
+		A882875414F4365000EFCEB2 /* Echo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A882875214F4365000EFCEB2 /* Echo.cpp */; };
+		A882875614F436E200EFCEB2 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A882875514F436E200EFCEB2 /* Accelerate.framework */; };
+		A88287B614F53A8C00EFCEB2 /* Delayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A88287A214F53A8C00EFCEB2 /* Delayer.cpp */; };
+		A88287B714F53A8C00EFCEB2 /* Delayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A88287A214F53A8C00EFCEB2 /* Delayer.cpp */; };
+		A88287B814F53A8C00EFCEB2 /* Enveloper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A88287A414F53A8C00EFCEB2 /* Enveloper.cpp */; };
+		A88287B914F53A8C00EFCEB2 /* Enveloper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A88287A414F53A8C00EFCEB2 /* Enveloper.cpp */; };
+		A88287BA14F53A8C00EFCEB2 /* SineWaveMod.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A88287B114F53A8C00EFCEB2 /* SineWaveMod.cpp */; };
+		A88287BB14F53A8C00EFCEB2 /* SineWaveMod.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A88287B114F53A8C00EFCEB2 /* SineWaveMod.cpp */; };
+		A8B420A814AD446200ECB2A6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8B420A714AD446200ECB2A6 /* UIKit.framework */; };
+		A8B420AA14AD446200ECB2A6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8B420A914AD446200ECB2A6 /* Foundation.framework */; };
+		A8B420AC14AD446200ECB2A6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8B420AB14AD446200ECB2A6 /* CoreGraphics.framework */; };
+		A8B420B214AD446200ECB2A6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A8B420B014AD446200ECB2A6 /* InfoPlist.strings */; };
+		A8B420B414AD446300ECB2A6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A8B420B314AD446200ECB2A6 /* main.m */; };
+		A8B420B814AD446300ECB2A6 /* EZPlgAppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = A8B420B714AD446300ECB2A6 /* EZPlgAppDelegate.mm */; };
+		A8B420BB14AD446300ECB2A6 /* EZPlgViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = A8B420BA14AD446300ECB2A6 /* EZPlgViewController.mm */; };
+		A8B420BE14AD446300ECB2A6 /* EZPlgViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8B420BC14AD446300ECB2A6 /* EZPlgViewController.xib */; };
+		A8B420C914AD446300ECB2A6 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8B420C814AD446300ECB2A6 /* SenTestingKit.framework */; };
+		A8B420CA14AD446300ECB2A6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8B420A714AD446200ECB2A6 /* UIKit.framework */; };
+		A8B420CB14AD446300ECB2A6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8B420A914AD446200ECB2A6 /* Foundation.framework */; };
+		A8B420D314AD446300ECB2A6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A8B420D114AD446300ECB2A6 /* InfoPlist.strings */; };
+		A8B420D614AD446300ECB2A6 /* EZPlugDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A8B420D514AD446300ECB2A6 /* EZPlugDemoTests.m */; };
+		A8B420E114AD449900ECB2A6 /* RemoteIOPlayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = A8B420DF14AD449900ECB2A6 /* RemoteIOPlayer.mm */; };
+		A8B420E814AD45C000ECB2A6 /* EZPlugSynthController.mm in Sources */ = {isa = PBXBuildFile; fileRef = A8B420E714AD45C000ECB2A6 /* EZPlugSynthController.mm */; };
+		A8B420EA14AD476700ECB2A6 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8B420E914AD476700ECB2A6 /* AudioToolbox.framework */; };
+		A8B420EC14AD47A800ECB2A6 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8B420EB14AD47A800ECB2A6 /* AVFoundation.framework */; };
+		A8B420EE14AD47CE00ECB2A6 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8B420ED14AD47CE00ECB2A6 /* CoreAudio.framework */; };
+		A8EF5D5F14F877D000641E09 /* FileRead.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A8EF5D5E14F877D000641E09 /* FileRead.cpp */; };
+		A8EF5D6314F87C1E00641E09 /* bachants.aif in Resources */ = {isa = PBXBuildFile; fileRef = A8EF5D6214F87C1E00641E09 /* bachants.aif */; };
+		A8EF5E2A14FC4B4300641E09 /* CPPAudioUtil.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A8EF5E2814FC4B4300641E09 /* CPPAudioUtil.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A8B420CC14AD446300ECB2A6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A8B4209A14AD446200ECB2A6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A8B420A214AD446200ECB2A6;
+			remoteInfo = EZPlugDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A882870214F4330000EFCEB2 /* ADSR.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ADSR.cpp; sourceTree = "<group>"; };
+		A882870314F4330000EFCEB2 /* ADSR.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADSR.h; sourceTree = "<group>"; };
+		A882870414F4330000EFCEB2 /* Delay.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Delay.cpp; sourceTree = "<group>"; };
+		A882870514F4330000EFCEB2 /* Delay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Delay.h; sourceTree = "<group>"; };
+		A882870614F4330000EFCEB2 /* Effect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Effect.h; sourceTree = "<group>"; };
+		A882870714F4330000EFCEB2 /* Filter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Filter.h; sourceTree = "<group>"; };
+		A882870814F4330000EFCEB2 /* Generator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Generator.h; sourceTree = "<group>"; };
+		A882870914F4330000EFCEB2 /* JCRev.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = JCRev.cpp; sourceTree = "<group>"; };
+		A882870A14F4330000EFCEB2 /* JCRev.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCRev.h; sourceTree = "<group>"; };
+		A882870B14F4330000EFCEB2 /* OnePole.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OnePole.cpp; sourceTree = "<group>"; };
+		A882870C14F4330000EFCEB2 /* OnePole.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OnePole.h; sourceTree = "<group>"; };
+		A882870D14F4330000EFCEB2 /* PRCRev.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PRCRev.cpp; sourceTree = "<group>"; };
+		A882870E14F4330000EFCEB2 /* PRCRev.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRCRev.h; sourceTree = "<group>"; };
+		A882870F14F4330000EFCEB2 /* SineWave.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SineWave.cpp; sourceTree = "<group>"; };
+		A882871014F4330000EFCEB2 /* SineWave.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SineWave.h; sourceTree = "<group>"; };
+		A882871114F4330000EFCEB2 /* Stk.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Stk.cpp; sourceTree = "<group>"; };
+		A882871214F4330000EFCEB2 /* Stk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stk.h; sourceTree = "<group>"; };
+		A882875214F4365000EFCEB2 /* Echo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Echo.cpp; sourceTree = "<group>"; };
+		A882875314F4365000EFCEB2 /* Echo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Echo.h; sourceTree = "<group>"; };
+		A882875514F436E200EFCEB2 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		A882879E14F53A8C00EFCEB2 /* AudioConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioConfiguration.h; sourceTree = "<group>"; };
+		A882879F14F53A8C00EFCEB2 /* EZPlugSynth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZPlugSynth.h; sourceTree = "<group>"; };
+		A88287A114F53A8C00EFCEB2 /* BufPlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BufPlay.h; sourceTree = "<group>"; };
+		A88287A214F53A8C00EFCEB2 /* Delayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Delayer.cpp; sourceTree = "<group>"; };
+		A88287A314F53A8C00EFCEB2 /* Delayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Delayer.h; sourceTree = "<group>"; };
+		A88287A414F53A8C00EFCEB2 /* Enveloper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Enveloper.cpp; sourceTree = "<group>"; };
+		A88287A514F53A8C00EFCEB2 /* Enveloper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Enveloper.h; sourceTree = "<group>"; };
+		A88287A614F53A8C00EFCEB2 /* EZClipper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZClipper.h; sourceTree = "<group>"; };
+		A88287A714F53A8C00EFCEB2 /* EZPlugGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZPlugGenerator.h; sourceTree = "<group>"; };
+		A88287A814F53A8C00EFCEB2 /* EZPlugTriggerable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZPlugTriggerable.h; sourceTree = "<group>"; };
+		A88287A914F53A8C00EFCEB2 /* FixedValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FixedValue.h; sourceTree = "<group>"; };
+		A88287AA14F53A8C00EFCEB2 /* Lag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Lag.h; sourceTree = "<group>"; };
+		A88287AB14F53A8C00EFCEB2 /* Line.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Line.h; sourceTree = "<group>"; };
+		A88287AC14F53A8C00EFCEB2 /* Mixer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mixer.h; sourceTree = "<group>"; };
+		A88287AD14F53A8C00EFCEB2 /* Multiplier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Multiplier.h; sourceTree = "<group>"; };
+		A88287AE14F53A8C00EFCEB2 /* Panner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Panner.h; sourceTree = "<group>"; };
+		A88287AF14F53A8C00EFCEB2 /* ReverberJCRev.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReverberJCRev.h; sourceTree = "<group>"; };
+		A88287B014F53A8C00EFCEB2 /* ReverberPRCRev.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReverberPRCRev.h; sourceTree = "<group>"; };
+		A88287B114F53A8C00EFCEB2 /* SineWaveMod.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SineWaveMod.cpp; sourceTree = "<group>"; };
+		A88287B214F53A8C00EFCEB2 /* SineWaveMod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SineWaveMod.h; sourceTree = "<group>"; };
+		A88287B314F53A8C00EFCEB2 /* TriggererPeriodic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TriggererPeriodic.h; sourceTree = "<group>"; };
+		A88287B414F53A8C00EFCEB2 /* Volume.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Volume.h; sourceTree = "<group>"; };
+		A88287B514F53A8C00EFCEB2 /* EZPlugHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZPlugHelper.h; sourceTree = "<group>"; };
+		A88287BC14F55F8500EFCEB2 /* EZPlugProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZPlugProcessor.h; sourceTree = "<group>"; };
+		A8B420A314AD446200ECB2A6 /* EZPlugDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EZPlugDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A8B420A714AD446200ECB2A6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		A8B420A914AD446200ECB2A6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		A8B420AB14AD446200ECB2A6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		A8B420AF14AD446200ECB2A6 /* EZPlugDemo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "EZPlugDemo-Info.plist"; sourceTree = "<group>"; };
+		A8B420B114AD446200ECB2A6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A8B420B314AD446200ECB2A6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A8B420B514AD446300ECB2A6 /* EZPlugDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EZPlugDemo-Prefix.pch"; sourceTree = "<group>"; };
+		A8B420B614AD446300ECB2A6 /* EZPlgAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EZPlgAppDelegate.h; sourceTree = "<group>"; };
+		A8B420B714AD446300ECB2A6 /* EZPlgAppDelegate.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = EZPlgAppDelegate.mm; sourceTree = "<group>"; };
+		A8B420B914AD446300ECB2A6 /* EZPlgViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EZPlgViewController.h; sourceTree = "<group>"; };
+		A8B420BA14AD446300ECB2A6 /* EZPlgViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = EZPlgViewController.mm; sourceTree = "<group>"; };
+		A8B420BD14AD446300ECB2A6 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/EZPlgViewController.xib; sourceTree = "<group>"; };
+		A8B420C714AD446300ECB2A6 /* EZPlugDemoTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EZPlugDemoTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A8B420C814AD446300ECB2A6 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		A8B420D014AD446300ECB2A6 /* EZPlugDemoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "EZPlugDemoTests-Info.plist"; sourceTree = "<group>"; };
+		A8B420D214AD446300ECB2A6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A8B420D414AD446300ECB2A6 /* EZPlugDemoTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EZPlugDemoTests.h; sourceTree = "<group>"; };
+		A8B420D514AD446300ECB2A6 /* EZPlugDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EZPlugDemoTests.m; sourceTree = "<group>"; };
+		A8B420DF14AD449900ECB2A6 /* RemoteIOPlayer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = RemoteIOPlayer.mm; sourceTree = "<group>"; };
+		A8B420E014AD449900ECB2A6 /* RemoteIOPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RemoteIOPlayer.h; sourceTree = "<group>"; };
+		A8B420E614AD45C000ECB2A6 /* EZPlugSynthController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZPlugSynthController.h; sourceTree = "<group>"; };
+		A8B420E714AD45C000ECB2A6 /* EZPlugSynthController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = EZPlugSynthController.mm; sourceTree = "<group>"; };
+		A8B420E914AD476700ECB2A6 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		A8B420EB14AD47A800ECB2A6 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		A8B420ED14AD47CE00ECB2A6 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
+		A8BFB62B14B4B77D0065DF1F /* EZPlgDemoSynth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZPlgDemoSynth.h; sourceTree = "<group>"; };
+		A8EF5D5D14F877AF00641E09 /* FileRead.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileRead.h; sourceTree = "<group>"; };
+		A8EF5D5E14F877D000641E09 /* FileRead.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FileRead.cpp; sourceTree = "<group>"; };
+		A8EF5D6214F87C1E00641E09 /* bachants.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = bachants.aif; sourceTree = "<group>"; };
+		A8EF5E2814FC4B4300641E09 /* CPPAudioUtil.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CPPAudioUtil.cpp; sourceTree = "<group>"; };
+		A8EF5E2914FC4B4300641E09 /* CPPAudioUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPPAudioUtil.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A8B420A014AD446200ECB2A6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A882875614F436E200EFCEB2 /* Accelerate.framework in Frameworks */,
+				A8B420EE14AD47CE00ECB2A6 /* CoreAudio.framework in Frameworks */,
+				A8B420EC14AD47A800ECB2A6 /* AVFoundation.framework in Frameworks */,
+				A8B420EA14AD476700ECB2A6 /* AudioToolbox.framework in Frameworks */,
+				A8B420A814AD446200ECB2A6 /* UIKit.framework in Frameworks */,
+				A8B420AA14AD446200ECB2A6 /* Foundation.framework in Frameworks */,
+				A8B420AC14AD446200ECB2A6 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A8B420C314AD446300ECB2A6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A8B420C914AD446300ECB2A6 /* SenTestingKit.framework in Frameworks */,
+				A8B420CA14AD446300ECB2A6 /* UIKit.framework in Frameworks */,
+				A8B420CB14AD446300ECB2A6 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A882870114F4330000EFCEB2 /* STK */ = {
+			isa = PBXGroup;
+			children = (
+				A8EF5D5E14F877D000641E09 /* FileRead.cpp */,
+				A8EF5D5D14F877AF00641E09 /* FileRead.h */,
+				A882875214F4365000EFCEB2 /* Echo.cpp */,
+				A882875314F4365000EFCEB2 /* Echo.h */,
+				A882870214F4330000EFCEB2 /* ADSR.cpp */,
+				A882870314F4330000EFCEB2 /* ADSR.h */,
+				A882870414F4330000EFCEB2 /* Delay.cpp */,
+				A882870514F4330000EFCEB2 /* Delay.h */,
+				A882870614F4330000EFCEB2 /* Effect.h */,
+				A882870714F4330000EFCEB2 /* Filter.h */,
+				A882870814F4330000EFCEB2 /* Generator.h */,
+				A882870914F4330000EFCEB2 /* JCRev.cpp */,
+				A882870A14F4330000EFCEB2 /* JCRev.h */,
+				A882870B14F4330000EFCEB2 /* OnePole.cpp */,
+				A882870C14F4330000EFCEB2 /* OnePole.h */,
+				A882870D14F4330000EFCEB2 /* PRCRev.cpp */,
+				A882870E14F4330000EFCEB2 /* PRCRev.h */,
+				A882870F14F4330000EFCEB2 /* SineWave.cpp */,
+				A882871014F4330000EFCEB2 /* SineWave.h */,
+				A882871114F4330000EFCEB2 /* Stk.cpp */,
+				A882871214F4330000EFCEB2 /* Stk.h */,
+			);
+			path = STK;
+			sourceTree = "<group>";
+		};
+		A882871A14F4346E00EFCEB2 /* EZPlug */ = {
+			isa = PBXGroup;
+			children = (
+				A8EF5E2814FC4B4300641E09 /* CPPAudioUtil.cpp */,
+				A8EF5E2914FC4B4300641E09 /* CPPAudioUtil.h */,
+				A882879E14F53A8C00EFCEB2 /* AudioConfiguration.h */,
+				A882879F14F53A8C00EFCEB2 /* EZPlugSynth.h */,
+				A88287A014F53A8C00EFCEB2 /* EZPlugGenerators */,
+				A88287B514F53A8C00EFCEB2 /* EZPlugHelper.h */,
+			);
+			path = EZPlug;
+			sourceTree = "<group>";
+		};
+		A88287A014F53A8C00EFCEB2 /* EZPlugGenerators */ = {
+			isa = PBXGroup;
+			children = (
+				A88287A114F53A8C00EFCEB2 /* BufPlay.h */,
+				A88287A214F53A8C00EFCEB2 /* Delayer.cpp */,
+				A88287A314F53A8C00EFCEB2 /* Delayer.h */,
+				A88287A414F53A8C00EFCEB2 /* Enveloper.cpp */,
+				A88287A514F53A8C00EFCEB2 /* Enveloper.h */,
+				A88287A614F53A8C00EFCEB2 /* EZClipper.h */,
+				A88287A714F53A8C00EFCEB2 /* EZPlugGenerator.h */,
+				A88287BC14F55F8500EFCEB2 /* EZPlugProcessor.h */,
+				A88287A814F53A8C00EFCEB2 /* EZPlugTriggerable.h */,
+				A88287A914F53A8C00EFCEB2 /* FixedValue.h */,
+				A88287AA14F53A8C00EFCEB2 /* Lag.h */,
+				A88287AB14F53A8C00EFCEB2 /* Line.h */,
+				A88287AC14F53A8C00EFCEB2 /* Mixer.h */,
+				A88287AD14F53A8C00EFCEB2 /* Multiplier.h */,
+				A88287AE14F53A8C00EFCEB2 /* Panner.h */,
+				A88287AF14F53A8C00EFCEB2 /* ReverberJCRev.h */,
+				A88287B014F53A8C00EFCEB2 /* ReverberPRCRev.h */,
+				A88287B114F53A8C00EFCEB2 /* SineWaveMod.cpp */,
+				A88287B214F53A8C00EFCEB2 /* SineWaveMod.h */,
+				A88287B314F53A8C00EFCEB2 /* TriggererPeriodic.h */,
+				A88287B414F53A8C00EFCEB2 /* Volume.h */,
+			);
+			path = EZPlugGenerators;
+			sourceTree = "<group>";
+		};
+		A8B4209814AD446200ECB2A6 = {
+			isa = PBXGroup;
+			children = (
+				A882875514F436E200EFCEB2 /* Accelerate.framework */,
+				A8B420ED14AD47CE00ECB2A6 /* CoreAudio.framework */,
+				A8B420EB14AD47A800ECB2A6 /* AVFoundation.framework */,
+				A8B420E914AD476700ECB2A6 /* AudioToolbox.framework */,
+				A8B420AD14AD446200ECB2A6 /* EZPlugDemo */,
+				A8B420CE14AD446300ECB2A6 /* EZPlugDemoTests */,
+				A8B420A614AD446200ECB2A6 /* Frameworks */,
+				A8B420A414AD446200ECB2A6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A8B420A414AD446200ECB2A6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A8B420A314AD446200ECB2A6 /* EZPlugDemo.app */,
+				A8B420C714AD446300ECB2A6 /* EZPlugDemoTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A8B420A614AD446200ECB2A6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A8B420A714AD446200ECB2A6 /* UIKit.framework */,
+				A8B420A914AD446200ECB2A6 /* Foundation.framework */,
+				A8B420AB14AD446200ECB2A6 /* CoreGraphics.framework */,
+				A8B420C814AD446300ECB2A6 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A8B420AD14AD446200ECB2A6 /* EZPlugDemo */ = {
+			isa = PBXGroup;
+			children = (
+				A8EF5D6214F87C1E00641E09 /* bachants.aif */,
+				A882871A14F4346E00EFCEB2 /* EZPlug */,
+				A882870114F4330000EFCEB2 /* STK */,
+				A8BFB62B14B4B77D0065DF1F /* EZPlgDemoSynth.h */,
+				A8B420DF14AD449900ECB2A6 /* RemoteIOPlayer.mm */,
+				A8B420E014AD449900ECB2A6 /* RemoteIOPlayer.h */,
+				A8B420B614AD446300ECB2A6 /* EZPlgAppDelegate.h */,
+				A8B420B714AD446300ECB2A6 /* EZPlgAppDelegate.mm */,
+				A8B420B914AD446300ECB2A6 /* EZPlgViewController.h */,
+				A8B420BA14AD446300ECB2A6 /* EZPlgViewController.mm */,
+				A8B420BC14AD446300ECB2A6 /* EZPlgViewController.xib */,
+				A8B420AE14AD446200ECB2A6 /* Supporting Files */,
+				A8B420E614AD45C000ECB2A6 /* EZPlugSynthController.h */,
+				A8B420E714AD45C000ECB2A6 /* EZPlugSynthController.mm */,
+			);
+			path = EZPlugDemo;
+			sourceTree = "<group>";
+		};
+		A8B420AE14AD446200ECB2A6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A8B420AF14AD446200ECB2A6 /* EZPlugDemo-Info.plist */,
+				A8B420B014AD446200ECB2A6 /* InfoPlist.strings */,
+				A8B420B314AD446200ECB2A6 /* main.m */,
+				A8B420B514AD446300ECB2A6 /* EZPlugDemo-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A8B420CE14AD446300ECB2A6 /* EZPlugDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				A8B420D414AD446300ECB2A6 /* EZPlugDemoTests.h */,
+				A8B420D514AD446300ECB2A6 /* EZPlugDemoTests.m */,
+				A8B420CF14AD446300ECB2A6 /* Supporting Files */,
+			);
+			path = EZPlugDemoTests;
+			sourceTree = "<group>";
+		};
+		A8B420CF14AD446300ECB2A6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A8B420D014AD446300ECB2A6 /* EZPlugDemoTests-Info.plist */,
+				A8B420D114AD446300ECB2A6 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A8B420A214AD446200ECB2A6 /* EZPlugDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A8B420D914AD446300ECB2A6 /* Build configuration list for PBXNativeTarget "EZPlugDemo" */;
+			buildPhases = (
+				A8B4209F14AD446200ECB2A6 /* Sources */,
+				A8B420A014AD446200ECB2A6 /* Frameworks */,
+				A8B420A114AD446200ECB2A6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EZPlugDemo;
+			productName = EZPlugDemo;
+			productReference = A8B420A314AD446200ECB2A6 /* EZPlugDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A8B420C614AD446300ECB2A6 /* EZPlugDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A8B420DC14AD446300ECB2A6 /* Build configuration list for PBXNativeTarget "EZPlugDemoTests" */;
+			buildPhases = (
+				A8B420C214AD446300ECB2A6 /* Sources */,
+				A8B420C314AD446300ECB2A6 /* Frameworks */,
+				A8B420C414AD446300ECB2A6 /* Resources */,
+				A8B420C514AD446300ECB2A6 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A8B420CD14AD446300ECB2A6 /* PBXTargetDependency */,
+			);
+			name = EZPlugDemoTests;
+			productName = EZPlugDemoTests;
+			productReference = A8B420C714AD446300ECB2A6 /* EZPlugDemoTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A8B4209A14AD446200ECB2A6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = A8B4209D14AD446200ECB2A6 /* Build configuration list for PBXProject "EZPlugDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = A8B4209814AD446200ECB2A6;
+			productRefGroup = A8B420A414AD446200ECB2A6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A8B420A214AD446200ECB2A6 /* EZPlugDemo */,
+				A8B420C614AD446300ECB2A6 /* EZPlugDemoTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A8B420A114AD446200ECB2A6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A8B420B214AD446200ECB2A6 /* InfoPlist.strings in Resources */,
+				A8B420BE14AD446300ECB2A6 /* EZPlgViewController.xib in Resources */,
+				A8EF5D6314F87C1E00641E09 /* bachants.aif in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A8B420C414AD446300ECB2A6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A8B420D314AD446300ECB2A6 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A8B420C514AD446300ECB2A6 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A8B4209F14AD446200ECB2A6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A8B420B414AD446300ECB2A6 /* main.m in Sources */,
+				A8B420B814AD446300ECB2A6 /* EZPlgAppDelegate.mm in Sources */,
+				A8B420BB14AD446300ECB2A6 /* EZPlgViewController.mm in Sources */,
+				A8B420E114AD449900ECB2A6 /* RemoteIOPlayer.mm in Sources */,
+				A8B420E814AD45C000ECB2A6 /* EZPlugSynthController.mm in Sources */,
+				A882871314F4330000EFCEB2 /* ADSR.cpp in Sources */,
+				A882871414F4330000EFCEB2 /* Delay.cpp in Sources */,
+				A882871514F4330000EFCEB2 /* JCRev.cpp in Sources */,
+				A882871614F4330000EFCEB2 /* OnePole.cpp in Sources */,
+				A882871714F4330000EFCEB2 /* PRCRev.cpp in Sources */,
+				A882871814F4330000EFCEB2 /* SineWave.cpp in Sources */,
+				A882871914F4330000EFCEB2 /* Stk.cpp in Sources */,
+				A88287B614F53A8C00EFCEB2 /* Delayer.cpp in Sources */,
+				A88287B814F53A8C00EFCEB2 /* Enveloper.cpp in Sources */,
+				A88287BA14F53A8C00EFCEB2 /* SineWaveMod.cpp in Sources */,
+				A8EF5D5F14F877D000641E09 /* FileRead.cpp in Sources */,
+				A8EF5E2A14FC4B4300641E09 /* CPPAudioUtil.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A8B420C214AD446300ECB2A6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A8B420D614AD446300ECB2A6 /* EZPlugDemoTests.m in Sources */,
+				A882875414F4365000EFCEB2 /* Echo.cpp in Sources */,
+				A88287B714F53A8C00EFCEB2 /* Delayer.cpp in Sources */,
+				A88287B914F53A8C00EFCEB2 /* Enveloper.cpp in Sources */,
+				A88287BB14F53A8C00EFCEB2 /* SineWaveMod.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A8B420CD14AD446300ECB2A6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A8B420A214AD446200ECB2A6 /* EZPlugDemo */;
+			targetProxy = A8B420CC14AD446300ECB2A6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A8B420B014AD446200ECB2A6 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A8B420B114AD446200ECB2A6 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		A8B420BC14AD446300ECB2A6 /* EZPlgViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A8B420BD14AD446300ECB2A6 /* en */,
+			);
+			name = EZPlgViewController.xib;
+			sourceTree = "<group>";
+		};
+		A8B420D114AD446300ECB2A6 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A8B420D214AD446300ECB2A6 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A8B420D714AD446300ECB2A6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A8B420D814AD446300ECB2A6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A8B420DA14AD446300ECB2A6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "EZPlugDemo/EZPlugDemo-Prefix.pch";
+				INFOPLIST_FILE = "EZPlugDemo/EZPlugDemo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		A8B420DB14AD446300ECB2A6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "EZPlugDemo/EZPlugDemo-Prefix.pch";
+				INFOPLIST_FILE = "EZPlugDemo/EZPlugDemo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		A8B420DD14AD446300ECB2A6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/EZPlugDemo.app/EZPlugDemo";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "EZPlugDemo/EZPlugDemo-Prefix.pch";
+				INFOPLIST_FILE = "EZPlugDemoTests/EZPlugDemoTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		A8B420DE14AD446300ECB2A6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/EZPlugDemo.app/EZPlugDemo";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "EZPlugDemo/EZPlugDemo-Prefix.pch";
+				INFOPLIST_FILE = "EZPlugDemoTests/EZPlugDemoTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A8B4209D14AD446200ECB2A6 /* Build configuration list for PBXProject "EZPlugDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A8B420D714AD446300ECB2A6 /* Debug */,
+				A8B420D814AD446300ECB2A6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A8B420D914AD446300ECB2A6 /* Build configuration list for PBXNativeTarget "EZPlugDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A8B420DA14AD446300ECB2A6 /* Debug */,
+				A8B420DB14AD446300ECB2A6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A8B420DC14AD446300ECB2A6 /* Build configuration list for PBXNativeTarget "EZPlugDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A8B420DD14AD446300ECB2A6 /* Debug */,
+				A8B420DE14AD446300ECB2A6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A8B4209A14AD446200ECB2A6 /* Project object */;
+}

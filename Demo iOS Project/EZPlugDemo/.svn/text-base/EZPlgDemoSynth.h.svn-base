@@ -1,0 +1,192 @@
+//
+//  EZPlgDemoSynth.h
+//  EZPlugDemo
+//
+//  Created by Morgan Packard on 12/29/11.
+//  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
+//
+
+#ifndef EZPlugDemo_EZPlgDemoSynth_h
+#define EZPlugDemo_EZPlgDemoSynth_h
+
+#include "Stk.h"
+using namespace stk;
+#include "Generator.h"
+#include "Mixer.h"
+#include "EZPlugSynth.h"
+#include "Panner.h"
+#include "SineWaveMod.h"
+#include "FixedValue.h"
+#include "Enveloper.h"
+#include "TriggererPeriodic.h"
+#include "Multiplier.h"
+#include "EZPlugHelper.h"
+#include "ReverberPRCRev.h"
+#include "FilePlay.h"
+
+using namespace std;
+using namespace EZPlug;
+
+extern std::string kCppBaseAudioFilePath;
+
+class EZPlugDemoSynth : public EZPlugSynth{
+
+private:
+protected:
+    
+public:
+    
+    EZPlugDemoSynth(std::string basePath){
+        
+            // The "a" method is an admitadly weird way of managing memory. It takes a pointer as its only argument
+            // and returns that same pointer. Behind the scenes, it stores the pointer and calls delete on it during destruction
+            // With the style I'm demonstrating here, there's no need to declare variables. You can just create and forget about objects 
+            // as needed. "A" is short for "add".
+            
+            output = a(new Mixer())
+            ->addInput(
+                
+                // Panner is a class which takes a mono signal and turns it in to a stereo signal. By default it pans center.
+                a(new Panner())
+                
+                // the "a" method returns a pointer to the Panner. 
+                // With "setSource", you add a pointer to whatever Generator object is making the signal that the Panner consumes
+                ->setSource( 
+                
+                    // SineWaveMod is a class which creates a SineWave using another Generator signal for its frequency. You can use it
+                    // for FM synthesis
+                    a(new SineWaveMod())
+                    ->setFrequency(
+                    
+                        // FixedValue is a Generator which outputs the same value until it's changed
+                        // This is the simplest way to set a frequency on a SineWaveMod, but you can use any Generator (or network of generators) you like.
+                        a(new FixedValue(200))
+                    
+                    )
+                )
+                
+                // EzPlug Generator objects are designed have chainable configuration methods. Any method such as "setSource" should return
+                // a pointer to the object the method is attached to. So here, "setVolume" is being called on the Panner we created.
+                // Ideally, every setter on an EZPlug generator would be able to accept a float or a Generator. However, there's significant
+                // work and complexity involved in that. As it is, some can accept floats, some can accept floats or FixedValues, some can 
+                // accept floats or any Generator, some can accept any Generator but not a float. 
+                ->setVolume(
+                
+                    // The "v" method is similar to the "a" method in that it takes a pointer as an argument and returns that same pointer,
+                    // handling memory management behind the scenes.
+                    // However, the "v" method is only for FixedValue objects. When you add a FixedValue object using "v", you also give it 
+                    // a unique name. You can use this name to retrieve it later, either to set a value on it, or to reuse it at another 
+                    // location in your synthesis network. "V" is short for "value", as in FixedValue.
+                    
+                    // In order to change the value of a FixedValue object which has been added using "v", you can simply call synth.setFixedValue(std::string name, float value), 
+                    // where "synth" is the instance of an EZPlugSynth subclass you're working with. In this way, you can set parameters on your synth easily without needing to explicitly
+                    // create setter methods or declare public variables.
+                    v(new FixedValue(0.3), "simpleSineVolume" )
+                
+                ) 
+            )
+            
+            // At this point, we've created a simple sine wave generator, set its frequency using a FixedValue object, fed it to a Panner to turned it from mono to stereo,
+            // and set its volume using a FixedValue object. We've wrapped "new SomeClass()" in two different functions, both of which return a pointer, and handle deletion
+            // "a", and "v". 
+            // With the comments taken out, the code is fairly nice and small, I think:
+            
+            /*            
+            
+                 mixer.addInput(
+                     a(new Panner())
+                     ->setSource( 
+                         a(new SineWaveMod())
+                         ->setFrequency(
+                             a(new FixedValue(200))
+                          )
+                     )
+                     ->setVolume(
+                         v(new FixedValue(200), "simpleSineVolume" )
+                     ) 
+                 );
+            
+              */           
+            
+            
+            
+            /*
+            
+             Next, we'll create a sine wave and modulate it with another sine wave. This synth definition will introduce a few new concepts: 
+            
+                - Enveloper
+                    Applies an envelope to a signal. Enveloper's "trigger" method restarts the envelope. 
+            
+                - Adder
+                    Adder is simply an alias for Mixer. I like to use it when I'm working with control signals, because 
+                    the idea of "adding" control signals is more intuitive to me than the idea of "mixing" them.
+                    
+                - t(EZPlugTriggerable* obj, std::string name)
+                    An EZPlugTriggerable must implement the "trigger" method. The "t" method is in the same family as "a" and "f". Like both, it
+                    both stores and returns a pointer, and handles deletion. Like "f", it stores an object (an EZPlugTriggerable, rather than a FixedValue)
+                    for later acces. To trigger a triggerable, you can call synth.trigger(std::string name).
+                    
+                - Multiplier
+                    Just like adder, only it multiplies
+             
+            */
+            
+            
+           ->addInput(
+                a(new ReverberPRCRev())
+                ->setMix(0.1)
+                ->setAudioSource(
+                    a(new Panner())
+                    ->setVolume(
+                        v(0.3, "fmSineSynth") // sugar for v(new FixedValue(0.3), "fmSineSynth")
+                    )
+                    ->setSource(
+                        t(new Enveloper(), "fmSineSynthEnvelope")
+                        ->setAllTimes(0.001, 0.51, 0, 0.001)
+                        ->setAudioSource(
+                            a(new SineWaveMod())
+                            ->setFrequency( // use some fm synthesis
+                                a(new Adder())
+                                ->addInput(v(200, "fmSineSynthFreq"))
+                                ->addInput(
+                                    a(new Multiplier())
+                                    ->addVal(v(0.1, "fmSineSynthFMAmount"))
+                                    ->addVal(v("fmSineSynthFreq"))
+                                    ->addVal(
+                                        a(new SineWaveMod())
+                                        ->setFrequency(v("fmSineSynthFreq"))
+                                    )
+                                )
+                            )
+                        )
+                    )
+                    
+                )
+            )
+            
+            ->addInput(
+                a(new Multiplier(2))
+                ->addVal(
+                    t(new FilePlay(basePath + "/TLC.mp3"), "simpleBufPlay")
+                )
+                ->addVal(
+                    a(new Panner())
+                    ->setSource(
+                        a(new SineWaveMod())
+                        ->setFrequency(
+                            v(new FixedValue(1.0f), "tremeloFreq")
+                        )
+                    )
+                    
+                )
+                
+            );
+    
+
+    }
+    
+
+    
+};
+
+#endif

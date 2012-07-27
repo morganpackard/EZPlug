@@ -1,0 +1,131 @@
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/ezplug/!svn/ver/2/trunk/EZPlugDemo/STK
+END
+Delay.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/ezplug/!svn/ver/2/trunk/EZPlugDemo/STK/Delay.cpp
+END
+ADSR.h
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/ezplug/!svn/ver/2/trunk/EZPlugDemo/STK/ADSR.h
+END
+OnePole.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/ezplug/!svn/ver/2/trunk/EZPlugDemo/STK/OnePole.cpp
+END
+Effect.h
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/ezplug/!svn/ver/2/trunk/EZPlugDemo/STK/Effect.h
+END
+PRCRev.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/ezplug/!svn/ver/2/trunk/EZPlugDemo/STK/PRCRev.cpp
+END
+Stk.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/ezplug/!svn/ver/2/trunk/EZPlugDemo/STK/Stk.cpp
+END
+Delay.h
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/ezplug/!svn/ver/2/trunk/EZPlugDemo/STK/Delay.h
+END
+OnePole.h
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/ezplug/!svn/ver/2/trunk/EZPlugDemo/STK/OnePole.h
+END
+PRCRev.h
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/ezplug/!svn/ver/2/trunk/EZPlugDemo/STK/PRCRev.h
+END
+Stk.h
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/ezplug/!svn/ver/2/trunk/EZPlugDemo/STK/Stk.h
+END
+JCRev.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/ezplug/!svn/ver/2/trunk/EZPlugDemo/STK/JCRev.cpp
+END
+FileRead.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/ezplug/!svn/ver/2/trunk/EZPlugDemo/STK/FileRead.cpp
+END
+JCRev.h
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/ezplug/!svn/ver/2/trunk/EZPlugDemo/STK/JCRev.h
+END
+Echo.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/ezplug/!svn/ver/2/trunk/EZPlugDemo/STK/Echo.cpp
+END
+FileRead.h
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/ezplug/!svn/ver/2/trunk/EZPlugDemo/STK/FileRead.h
+END
+SineWave.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/ezplug/!svn/ver/2/trunk/EZPlugDemo/STK/SineWave.cpp
+END
+Echo.h
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/ezplug/!svn/ver/2/trunk/EZPlugDemo/STK/Echo.h
+END
+SineWave.h
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/ezplug/!svn/ver/2/trunk/EZPlugDemo/STK/SineWave.h
+END
+ADSR.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/ezplug/!svn/ver/2/trunk/EZPlugDemo/STK/ADSR.cpp
+END
+Filter.h
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/ezplug/!svn/ver/2/trunk/EZPlugDemo/STK/Filter.h
+END
+Generator.h
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/ezplug/!svn/ver/2/trunk/EZPlugDemo/STK/Generator.h
+END

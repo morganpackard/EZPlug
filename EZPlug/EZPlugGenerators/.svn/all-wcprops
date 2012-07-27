@@ -1,0 +1,143 @@
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/ezplug/!svn/ver/2/trunk/EZPlugDemo/EZPlug/EZPlugGenerators
+END
+Enveloper.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/ezplug/!svn/ver/2/trunk/EZPlugDemo/EZPlug/EZPlugGenerators/Enveloper.cpp
+END
+FixedValue.h
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/ezplug/!svn/ver/2/trunk/EZPlugDemo/EZPlug/EZPlugGenerators/FixedValue.h
+END
+EZClipper.h
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/ezplug/!svn/ver/7/trunk/EZPlugDemo/EZPlug/EZPlugGenerators/EZClipper.h
+END
+ReverberPRCRev.h
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/ezplug/!svn/ver/2/trunk/EZPlugDemo/EZPlug/EZPlugGenerators/ReverberPRCRev.h
+END
+Enveloper.h
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/ezplug/!svn/ver/4/trunk/EZPlugDemo/EZPlug/EZPlugGenerators/Enveloper.h
+END
+FilePlayFileRead.h
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/ezplug/!svn/ver/8/trunk/EZPlugDemo/EZPlug/EZPlugGenerators/FilePlayFileRead.h
+END
+BufPlay.h
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/ezplug/!svn/ver/5/trunk/EZPlugDemo/EZPlug/EZPlugGenerators/BufPlay.h
+END
+Lag.h
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/ezplug/!svn/ver/2/trunk/EZPlugDemo/EZPlug/EZPlugGenerators/Lag.h
+END
+FilePlay.h
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/ezplug/!svn/ver/8/trunk/EZPlugDemo/EZPlug/EZPlugGenerators/FilePlay.h
+END
+EZPlugProcessor.h
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/ezplug/!svn/ver/2/trunk/EZPlugDemo/EZPlug/EZPlugGenerators/EZPlugProcessor.h
+END
+ReverberJCRev.h
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/ezplug/!svn/ver/2/trunk/EZPlugDemo/EZPlug/EZPlugGenerators/ReverberJCRev.h
+END
+Volume.h
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/ezplug/!svn/ver/2/trunk/EZPlugDemo/EZPlug/EZPlugGenerators/Volume.h
+END
+TriggererPeriodic.h
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/ezplug/!svn/ver/2/trunk/EZPlugDemo/EZPlug/EZPlugGenerators/TriggererPeriodic.h
+END
+SineWaveMod.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/ezplug/!svn/ver/2/trunk/EZPlugDemo/EZPlug/EZPlugGenerators/SineWaveMod.cpp
+END
+EZPlugGenerator.h
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/ezplug/!svn/ver/2/trunk/EZPlugDemo/EZPlug/EZPlugGenerators/EZPlugGenerator.h
+END
+EZPlugTriggerable.h
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/ezplug/!svn/ver/2/trunk/EZPlugDemo/EZPlug/EZPlugGenerators/EZPlugTriggerable.h
+END
+Delayer.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/ezplug/!svn/ver/2/trunk/EZPlugDemo/EZPlug/EZPlugGenerators/Delayer.cpp
+END
+SineWaveMod.h
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/ezplug/!svn/ver/2/trunk/EZPlugDemo/EZPlug/EZPlugGenerators/SineWaveMod.h
+END
+Panner.h
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/ezplug/!svn/ver/2/trunk/EZPlugDemo/EZPlug/EZPlugGenerators/Panner.h
+END
+Mixer.h
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/ezplug/!svn/ver/8/trunk/EZPlugDemo/EZPlug/EZPlugGenerators/Mixer.h
+END
+Delayer.h
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/ezplug/!svn/ver/2/trunk/EZPlugDemo/EZPlug/EZPlugGenerators/Delayer.h
+END
+Multiplier.h
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/ezplug/!svn/ver/8/trunk/EZPlugDemo/EZPlug/EZPlugGenerators/Multiplier.h
+END
+Line.h
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/ezplug/!svn/ver/2/trunk/EZPlugDemo/EZPlug/EZPlugGenerators/Line.h
+END

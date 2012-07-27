@@ -1,0 +1,152 @@
+//
+//  FileReadExtAudioFile.h
+//  ChuckWagonBoys
+//
+//  Created by Morgan Packard on 5/30/12.
+//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
+//
+
+#ifndef ChuckWagonBoys_FileReadExtAudioFile_h
+#define ChuckWagonBoys_FileReadExtAudioFile_h
+
+class FileReadExtAudioFile {
+  
+  AudioBufferList convertedData;
+  float *outputBuffer;
+  UInt32 outputBufferSize;
+  AudioStreamBasicDescription outputFormat;
+  ExtAudioFileRef inputFile;
+  int indexOfNextFrameToCopyFromOutputBuffer;
+  int currentFrameInFile;
+  UInt32 frameCount;
+
+  void checkCAError(OSStatus error, const char *operation){
+    if (error == noErr) return;
+    char errorString[20];
+    // See if it appears to be a 4-char-code
+    *(UInt32 *)(errorString + 1) = CFSwapInt32HostToBig(error);
+    if (isprint(errorString[1]) && isprint(errorString[2]) &&
+        isprint(errorString[3]) && isprint(errorString[4])) {
+        errorString[0] = errorString[5] = '\'';
+        errorString[6] = '\0';
+    } else
+        // No, format it as an integer
+        sprintf(errorString, "%d", (int)error);
+    fprintf(stderr, "Error: %s (%s)\n", operation, errorString);
+    exit(1); 
+  }
+  
+  void loadDataFromFile(){
+    indexOfNextFrameToCopyFromOutputBuffer = 0;
+    // wrap the destination buffer in an AudioBufferList
+    convertedData.mNumberBuffers = 1;
+    convertedData.mBuffers[0].mNumberChannels = outputFormat.mChannelsPerFrame;
+    convertedData.mBuffers[0].mDataByteSize = outputBufferSize;
+    convertedData.mBuffers[0].mData = outputBuffer;
+        
+    frameCount = 512; //packetsPerBuffer;
+        
+    checkCAError(ExtAudioFileRead(inputFile, &frameCount, &convertedData), "Couldn't read from input file");
+                
+    if (frameCount == 0) {
+      ExtAudioFileSeek(inputFile, 0);
+      currentFrameInFile = 0;
+    }
+  }
+
+public:
+  FileReadExtAudioFile( std::string path ){
+    outputBuffer = 0;
+    close();
+    open(path);
+  }
+  
+  ~FileReadExtAudioFile(){
+    free(outputBuffer);
+    close();
+  }
+  
+  void open(string path, int numChannels = 2){
+    close();
+    currentFrameInFile = 0;
+//    printf("FileReadExtAudioFile. Opening file: %s\n", path.c_str());
+    CFStringRef cfStringRef; 
+    cfStringRef = CFStringCreateWithCString(kCFAllocatorDefault, 
+    path.c_str(), 
+    kCFStringEncodingMacRoman); 
+    
+    CFURLRef inputFileURL = CFURLCreateWithFileSystemPath(kCFAllocatorDefault, cfStringRef, kCFURLPOSIXPathStyle, false);
+                    
+    checkCAError(ExtAudioFileOpenURL(inputFileURL,  &inputFile), "ExtAudioFileOpenURL failed");
+
+    memset(&outputFormat, 0, sizeof(outputFormat));
+    outputFormat.mSampleRate = 44100.0;
+    outputFormat.mFormatID = kAudioFormatLinearPCM;
+    outputFormat.mFormatFlags = kAudioFormatFlagIsFloat;
+    outputFormat.mBytesPerPacket = 4 * numChannels;
+    outputFormat.mFramesPerPacket = 1;
+    outputFormat.mBytesPerFrame = 4 * numChannels;
+    outputFormat.mChannelsPerFrame = 2;
+    outputFormat.mBitsPerChannel = 32;
+
+    OSStatus error = ExtAudioFileSetProperty(inputFile, kExtAudioFileProperty_ClientDataFormat, sizeof(AudioStreamBasicDescription), &outputFormat);
+    checkCAError(error, "Error setting property.");
+
+    outputBufferSize = 32 * 1024; // 32 KB is a good starting point
+
+    // allocate destination buffer
+    outputBuffer = (float *)malloc(sizeof(float *) * outputBufferSize);
+    loadDataFromFile();
+  }
+  
+  void read( StkFrames& frames, unsigned long startFrame = 0, bool doNormalize = true ){
+  
+    if(startFrame != currentFrameInFile){
+      ExtAudioFileSeek(inputFile, startFrame);
+      loadDataFromFile();
+    }
+  
+    int indexOfFrameToCopyInTo = 0;
+    while(indexOfFrameToCopyInTo < frames.frames()){
+      int numFramesLeftInOutputBuffer = frameCount - indexOfNextFrameToCopyFromOutputBuffer;
+      int numFramesLeftInDestinationBuffer = frames.frames() - indexOfFrameToCopyInTo;
+      int numFramesToCopy = min<int>(numFramesLeftInOutputBuffer, numFramesLeftInDestinationBuffer);
+      memcpy(&frames(indexOfFrameToCopyInTo,0), outputBuffer + (indexOfNextFrameToCopyFromOutputBuffer*2), sizeof(StkFloat) * frames.channels() * numFramesToCopy);
+      indexOfNextFrameToCopyFromOutputBuffer += numFramesToCopy;
+      indexOfFrameToCopyInTo += numFramesToCopy;
+      currentFrameInFile += numFramesToCopy;
+      if(indexOfNextFrameToCopyFromOutputBuffer >= frameCount){      
+        loadDataFromFile();
+      }
+    }
+  }
+  
+  void close(){
+    if(outputBuffer != 0){
+      free(outputBuffer);
+      outputBuffer = 0;
+    }
+    ExtAudioFileDispose(inputFile);
+  }
+
+  virtual unsigned long fileSize( void ){
+  
+    SInt64	fileLength;
+    UInt32 propertySize = sizeof(fileLength);
+    
+    checkCAError(ExtAudioFileGetProperty(	inputFile,
+							kExtAudioFileProperty_FileLengthFrames,
+							&propertySize,
+							&fileLength), "failed getting file length");		
+
+  
+    return fileLength;
+  }
+  
+  unsigned int channels( void ){
+    return outputFormat.mChannelsPerFrame;
+  }
+
+};
+
+#endif
