@@ -1,7 +1,7 @@
 EZPlug
 ======
 
-EZPlug is a baby C++ library designed to make audio synthesis in C++ faster, easier, and more fun. Right now it's used by pretty much only Morgan Packard, but he'd love for you to use it toand to help him make it better. Morgan realizes that in its current state it's going to be very hard for anyone to understand. Please encourage him to document it and make tutorials.
+EZPlug is a baby C++ library designed to make audio synthesis in C++ faster, easier, and more fun. Right now it's used by pretty much only Morgan Packard, but he'd love for you to use it too and to help him make it better. Morgan realizes that in its current state it's going to be very hard for anyone to understand. Please encourage him to document it and make tutorials.
 
 EZPlug is built on top of the STK library, a collection of low-level tools for audio synthesis. While STK is great with the nuts and bolts of synthesis, it isn't designed for easy modularity between unit generators. EZPlug aims to be a slightly higher-level "glue" which can be used to easily connect STK classes.
 
@@ -10,8 +10,12 @@ Another thing about all of this: it's my first foray in to C++, and I've taken w
 The plan is for EZPlug to have a very permissive license. I personally will be using it for commercial development and would be delighted to have others doing the same. 
 
 #Who is EZPlug For?
+EZPlug is for people who: want to build high performance synthesizers in to their software, but don't like patching, so don't want to use PD.
 
 #Why use EZPlug rather than straight STK?
+
+EZPlug is designed for efficiency. It assumes that you want to calculate your samples in batches, rather than one sample at a time. This can lead to dramatic increases in performance, but can be a little clumsy to code. EZPlug hides the clumsiness and lets you focus on synthesis.
+
 EZPlug is designed for fast development. EZPlug will manage your synthesis network for you. No need to create instance variables for generator objects -- EZPlug will keep track of them for you. No need to create getter and setter methods for parameters. EZPlug's FixedValue and Triggerable objects allow you to set parameters and send trigger messages based on parameter names.
 
 #Where to Start

@@ -26,7 +26,8 @@
 
 using namespace std;
 
-static const int framesPerBuffer = 4000;
+//static const int framesPerBuffer = 4000;
+static const int framesPerBuffer = 1000;
 
 class FilePlayFrames : public StkFrames{
 public:

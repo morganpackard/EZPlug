@@ -61,6 +61,7 @@ public:
 		setSamplesOfLag(Stk::sampleRate() * seconds);
         return this;
 	}
+  
 	
 	Lag* setTarget(StkFloat val){
 		target = val;
@@ -117,7 +118,7 @@ public:
             setTarget(targetFV->value);
         }
         
-        StkFloat *samples = &frames[channel];
+        StkFloat *samples = &frames[0];
         for ( unsigned int i=0; i<frames.frames(); i++ ) {
             
             current += incrementAmount;
@@ -132,8 +133,10 @@ public:
                 }
             }
             
-            *samples++ = current; 
-            
+            for(int i = 0; i < frames.channels(); i++){
+              *samples++ = current;
+            }
+             
         }
         
         return frames;

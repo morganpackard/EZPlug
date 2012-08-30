@@ -36,5 +36,6 @@
 -(IBAction)setTremoloFrequencyForAudioFile:(id)sender;
 
 -(void) fillBuffer:(UInt32 *)frameBuffer numFrames:(UInt32)inNumberFrames;
+-(void) runPerformanceTests;
 
 @end

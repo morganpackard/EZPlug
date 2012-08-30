@@ -78,17 +78,21 @@ extern std::string kCppBaseAudioFilePath;
 
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
-    // todo explain what this is
-    
-    synth = new EZPlugDemoSynth([[[NSBundle mainBundle] bundlePath] UTF8String]);
+  [super viewDidLoad];
+  
+  [self runPerformanceTests];
+  
+  
+  // todo explain what this is
+  
+  synth = new EZPlugDemoSynth([[[NSBundle mainBundle] bundlePath] UTF8String]);
 
-    synthFrames.resize(2, kSynthesisBlockSize);
-    rioPlayer = [[RemoteIOPlayer alloc]init];
-	[rioPlayer intialiseAudio];
-    rioPlayer.source = self;
-    synthBufferReadPosition = 0;
-    [rioPlayer start];
+  synthFrames.resize(2, kSynthesisBlockSize);
+  rioPlayer = [[RemoteIOPlayer alloc]init];
+  [rioPlayer intialiseAudio];
+  rioPlayer.source = self;
+  synthBufferReadPosition = 0;
+  [rioPlayer start];
     
 }
 
@@ -129,8 +133,62 @@ extern std::string kCppBaseAudioFilePath;
     }
 }
 
+-(void) runPerformanceTests{
+
+  NSLog(@"\n\n\n");
+  NSLog(@"++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+  NSLog(@"++++++++++++++++++++++++++ Testing performance +++++++++++++++++++++++");
+  NSLog(@"++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+
+  StkFrames testFrames;
+  testFrames.resize(44100 * 10);
+  NSDate* start = [NSDate date];
+  stk::SineWave sineWave;
+  stk::SineWave sineWave2;
+  stk::SineWave sineWave3;
+  
+  // test sine generation using sample-at-a-time calculation
+  float* bufStart = &testFrames[0];
+  for(int i = 0; i <testFrames.frames(); i++){
+        *(bufStart++) = sineWave.tick();
+  }
+  NSLog(@"Time to generate ten seconds of sinewave, using single-sample calculation: %f", [[NSDate date] timeIntervalSinceDate:start]);
+  
+  // test sine generation with buffer-at-a-time calculation
+  start = [NSDate date];
+  sineWave.tick(testFrames);
+  NSLog(@"Time to generate ten seconds of sinewave, using buffer-at-a-time calculation: %f", [[NSDate date] timeIntervalSinceDate:start]);
+  
+  // add three sine waves, sample-at-a-time
+  start = [NSDate date];
+  bufStart = &testFrames[0];
+  for(int i = 0; i <testFrames.frames(); i++){
+    *bufStart = sineWave.tick();
+    *bufStart += sineWave2.tick();
+    *bufStart += sineWave3.tick();
+    bufStart++;
+  }
+  NSLog(@"Time to generate ten seconds of three sinewaves, mixed together, using buffer-at-a-time calculation: %f", [[NSDate date] timeIntervalSinceDate:start]);
+  
+  // add three sine waves, the EZPlug way
+  start = [NSDate date];
+  Mixer mixer;
+  mixer.addInput(&sineWave);
+  mixer.addInput(&sineWave2);
+  mixer.addInput(&sineWave3);
+  mixer.tick(testFrames);
+  NSLog(@"Time to generate ten seconds of three sinewaves, mixed together, using the EZPlug mixer: %f", [[NSDate date] timeIntervalSinceDate:start]);
+  
+  
+  NSLog(@"++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+  NSLog(@"++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n\n\n");
+  
+  
+}
+
 -(void)dealloc{
-    delete synth;
+  delete synth;
+  [super dealloc];
 }
 
 @end
